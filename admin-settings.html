@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajustes — Admin Nexify</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+<div class="app-container">
+  
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="Logo-normal.png" alt="Nexify" class="sidebar-logo"/>
+      <span style="background: var(--y); color: var(--dk); font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-family: var(--mono);">ADMIN</span>
+    </div>
+    
+    <div class="sidebar-nav">
+      <div class="nav-section-title">Core</div>
+      <a href="admin-dashboard.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+        Panel Global
+      </a>
+      <a href="admin-campaigns.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+        Marcas y Campañas
+      </a>
+      
+      <div class="nav-section-title">Recursos</div>
+      <a href="admin-games.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        Catálogo de Juegos
+      </a>
+      <a href="admin-creators.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Base de Creadores
+      </a>
+
+      <div class="nav-section-title">Sistema</div>
+      <a href="admin-settings.html" class="nav-item active">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Ajustes Globales
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <span class="user-name">Administrador</span>
+        <span class="user-role">Nexify Studio</span>
+      </div>
+      <a href="login.html" style="margin-left:auto;" title="Cerrar sesión">
+        <svg class="icon" viewBox="0 0 24 24" style="color:var(--g4);"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="search-bar">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Buscar ajustes..."/>
+        </div>
+      </div>
+    </header>
+    
+    <div class="content-area">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Ajustes Globales</h1>
+          <p class="page-subtitle">Configuración del sistema de la agencia.</p>
+        </div>
+        <button class="btn-primary">Guardar Configuración</button>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="section-box">
+          <div class="box-header">
+            <h2 class="box-title">Preferencias del Servidor</h2>
+          </div>
+          <div class="box-content">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div>
+                <label class="form-label">Endpoints API (Desarrollo)</label>
+                <input type="text" value="api.nexify.es/v1" class="form-input"/>
+              </div>
+              <div>
+                <label class="form-label">Timeout Global (Segundos)</label>
+                <input type="number" value="30" class="form-input"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-box">
+          <div class="box-header">
+            <h2 class="box-title">Gestión de Accesos</h2>
+          </div>
+          <div class="box-content">
+            <p style="font-size: 0.85rem; color: var(--g4); margin-bottom: 16px;">Control de miembros del equipo de la agencia.</p>
+            <button class="btn-secondary" style="width: 100%; margin-bottom: 12px;">+ Invitar Miembro</button>
+            <button class="btn-secondary" style="width: 100%;">Ver Roles y Permisos</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

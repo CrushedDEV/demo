@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Cliente — Nexify</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="Logo-normal.png" alt="Nexify" class="sidebar-logo"/>
+    </div>
+    
+    <div class="sidebar-nav">
+      <div class="nav-section-title">Análisis</div>
+      <a href="client-dashboard.html" class="nav-item active">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+        Overview Campaña
+      </a>
+      <a href="client-reports.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+        Reportes Detallados
+      </a>
+      
+      <div class="nav-section-title">Gestión</div>
+      <a href="client-settings.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Configuración del Juego
+      </a>
+      <a href="client-creators.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Creadores Activos
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <span class="user-name">Ana García</span>
+        <span class="user-role">Monster Energy</span>
+      </div>
+      <a href="login.html" style="margin-left:auto;" title="Cerrar sesión">
+        <svg class="icon" viewBox="0 0 24 24" style="color:var(--g4);"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="search-bar">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Buscar métricas o reportes..."/>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-action">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="topbar-action">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        </div>
+      </div>
+    </header>
+    
+    <div class="content-area">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Reto Xtreme 2026</h1>
+          <p class="page-subtitle">Estado actual de la campaña en directo.</p>
+        </div>
+        <button class="btn-primary">
+          <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Exportar Datos
+        </button>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Leads Generados (MQLs)</span>
+            <svg class="icon kpi-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+          </div>
+          <div class="kpi-val">14,210</div>
+          <div class="kpi-trend positive"><svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg> CPA Actual: 1.24€</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Participaciones Únicas</span>
+            <svg class="icon kpi-icon" viewBox="0 0 24 24"><path d="M2 12h4l2-9 5 18 2-9h5"></path></svg>
+          </div>
+          <div class="kpi-val">89,210</div>
+          <div class="kpi-trend positive"><svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg> Costo por Jugador: 0.45€</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">ROAS Estimado</span>
+            <svg class="icon kpi-icon" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="kpi-val">245%</div>
+          <div class="kpi-trend positive"><svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg> ROI Sólido</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Tasa de Conversión a Venta</span>
+            <svg class="icon kpi-icon" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+          </div>
+          <div class="kpi-val">6.8%</div>
+          <div class="kpi-trend positive"><svg class="icon" viewBox="0 0 24 24" style="width:12px;height:12px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg> +1.2% vs Benchmark Industria</div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- CHARTS AREA -->
+        <div class="section-box">
+          <div class="box-header">
+            <h2 class="box-title">Embudo de Conversión (Funnel)</h2>
+            <select class="form-input" style="width: auto; padding: 6px 12px; font-size: 0.8rem;">
+              <option>Últimos 7 días</option>
+              <option>Últimos 30 días</option>
+            </select>
+          </div>
+          <div class="box-content">
+            <div id="chart-container" class="chart-container">
+              [ ESPACIO PREPARADO PARA CHART.JS / LÍNEAS DE TENDENCIA ]
+            </div>
+          </div>
+        </div>
+
+        <!-- RECENT ACTIVITY -->
+        <div class="section-box">
+          <div class="box-header">
+            <h2 class="box-title">Actividad Reciente</h2>
+          </div>
+          <div class="box-content">
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon"><svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                <div class="activity-details">
+                  <div class="activity-text"><strong>Costo por Lead (CPL)</strong> optimizado por debajo de 1.50€.</div>
+                  <div class="activity-time">Hace 2 horas</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon"><svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                <div class="activity-details">
+                  <div class="activity-text">Hito desbloqueado: <strong>10,000 cupones</strong> redimidos en checkout.</div>
+                  <div class="activity-time">Ayer a las 18:30</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon"><svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+                <div class="activity-details">
+                  <div class="activity-text">Se añadió un nuevo código promocional <strong>MONSTER20</strong>.</div>
+                  <div class="activity-time">Hace 2 días</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUDGET SETTINGS -->
+      <div class="section-box">
+        <div class="box-header">
+          <h2 class="box-title">Distribución de Presupuesto / Cupones</h2>
+          <button class="btn-secondary">Ajustar Límites</button>
+        </div>
+        <div class="box-content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div>
+              <label class="form-label">Cupos de Descuento Restantes (Stock Diario)</label>
+              <input type="text" value="1,204 / 5,000" class="form-input" disabled style="background: #f9fafb;"/>
+            </div>
+            <div>
+              <label class="form-label">CPA Máximo Permitido (€)</label>
+              <input type="number" value="2.50" class="form-input"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>

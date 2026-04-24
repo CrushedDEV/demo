@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel — Nexify</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="Logo-normal.png" alt="Nexify" class="sidebar-logo"/>
+      <span style="background: var(--y); color: var(--dk); font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-family: var(--mono);">ADMIN</span>
+    </div>
+    
+    <div class="sidebar-nav">
+      <div class="nav-section-title">Core</div>
+      <a href="admin-dashboard.html" class="nav-item active">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+        Panel Global
+      </a>
+      <a href="admin-campaigns.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+        Marcas y Campañas
+      </a>
+      
+      <div class="nav-section-title">Recursos</div>
+      <a href="admin-games.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        Catálogo de Juegos
+      </a>
+      <a href="admin-creators.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Base de Creadores
+      </a>
+
+      <div class="nav-section-title">Sistema</div>
+      <a href="admin-settings.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Ajustes Globales
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <span class="user-name">Administrador</span>
+        <span class="user-role">Nexify Studio</span>
+      </div>
+      <a href="login.html" style="margin-left:auto;" title="Cerrar sesión">
+        <svg class="icon" viewBox="0 0 24 24" style="color:var(--g4);"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="search-bar">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Buscar clientes, campañas o IDs..."/>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-action">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="topbar-action">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        </div>
+      </div>
+    </header>
+    
+    <div class="content-area">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Administración Central</h1>
+          <p class="page-subtitle">Resumen global de actividad de la agencia.</p>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <button class="btn-secondary">Generar Reporte Mensual</button>
+          <button class="btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Nueva Campaña
+          </button>
+        </div>
+      </div>
+
+      <!-- ADMIN KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Campañas Activas</span>
+            <svg class="icon kpi-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <div class="kpi-val">12</div>
+          <div class="kpi-trend positive">+2 este mes</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Leads Recientes (30d)</span>
+            <svg class="icon kpi-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div class="kpi-val">45</div>
+          <div class="kpi-trend positive">+15% vs mes pasado</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Base de Creadores</span>
+            <svg class="icon kpi-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div class="kpi-val">342</div>
+          <div class="kpi-trend">Estable</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Peticiones a Servidor</span>
+            <svg class="icon kpi-icon"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          </div>
+          <div class="kpi-val">2.1M</div>
+          <div class="kpi-trend negative">Carga moderada</div>
+        </div>
+      </div>
+
+      <!-- CAMPAÑAS TABLE -->
+      <div class="section-box">
+        <div class="box-header">
+          <h2 class="box-title">Gestión de Campañas</h2>
+          <div style="display: flex; gap: 12px;">
+            <select class="form-input" style="padding: 6px 12px; font-size: 0.8rem; width: auto;">
+              <option>Todas las campañas</option>
+              <option>Activas</option>
+              <option>Pausadas</option>
+            </select>
+          </div>
+        </div>
+        <div class="box-content" style="padding: 0;">
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Campaña / Tipo</th>
+                  <th>Estado</th>
+                  <th>Uso Servidor</th>
+                  <th>Creadores</th>
+                  <th style="text-align: right;">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600; color: var(--dk);">Monster Energy</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">ID: CP-2026-04</div>
+                  </td>
+                  <td>
+                    <div>Reto Xtreme</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">Minijuego HTML5</div>
+                  </td>
+                  <td><span class="status-badge status-active">Activa</span></td>
+                  <td><span style="font-family: var(--mono); font-size: 0.85rem;">142K Req.</span></td>
+                  <td>5</td>
+                  <td class="action-links" style="justify-content: flex-end;">
+                    <a href="#">Detalles</a>
+                    <a href="#" style="color: var(--dk);">Ajustes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600; color: var(--dk);">Nike</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">ID: CP-2026-03</div>
+                  </td>
+                  <td>
+                    <div>Run The City</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">AR Filter</div>
+                  </td>
+                  <td><span class="status-badge status-active">Activa</span></td>
+                  <td><span style="font-family: var(--mono); font-size: 0.85rem;">89K Req.</span></td>
+                  <td>12</td>
+                  <td class="action-links" style="justify-content: flex-end;">
+                    <a href="#">Detalles</a>
+                    <a href="#" style="color: var(--dk);">Ajustes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600; color: var(--dk);">Netflix</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">ID: CP-2026-01</div>
+                  </td>
+                  <td>
+                    <div>Trivia Stranger Things</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">Twitch Integration</div>
+                  </td>
+                  <td><span class="status-badge status-ended">Finalizada</span></td>
+                  <td><span style="font-family: var(--mono); font-size: 0.85rem;">500K Req.</span></td>
+                  <td>1</td>
+                  <td class="action-links" style="justify-content: flex-end;">
+                    <a href="#">Reporte Final</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600; color: var(--dk);">Samsung</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">ID: CP-2026-02</div>
+                  </td>
+                  <td>
+                    <div>Galaxy Challenge</div>
+                    <div style="font-size: 0.75rem; color: var(--g4);">Minijuego HTML5</div>
+                  </td>
+                  <td><span class="status-badge status-paused">Pausada</span></td>
+                  <td><span style="font-family: var(--mono); font-size: 0.85rem;">-</span></td>
+                  <td>3</td>
+                  <td class="action-links" style="justify-content: flex-end;">
+                    <a href="#">Reanudar</a>
+                    <a href="#" style="color: var(--dk);">Ajustes</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>

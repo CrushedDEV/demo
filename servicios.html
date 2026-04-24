@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicios — Nexify Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .zigzag-section { padding: 80px 24px; background: var(--wh); border-bottom: 2px solid var(--g2); }
+    .zigzag-section:nth-child(even) { background: var(--g1); }
+    .zigzag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .zigzag-grid.reverse .zigzag-text { order: 2; }
+    .zigzag-grid.reverse .zigzag-visual { order: 1; }
+    .zigzag-title { font-family: var(--display); font-size: 3rem; color: var(--dk); line-height: 1.1; margin-bottom: 20px; letter-spacing: 0.02em; }
+    .zigzag-desc { font-size: 1.05rem; color: var(--g4); line-height: 1.8; margin-bottom: 24px; }
+    .zigzag-visual { border-radius: var(--r); overflow: hidden; border: 3px solid var(--dk); box-shadow: 6px 6px 0 var(--dk); }
+    .zigzag-visual img { width: 100%; height: 400px; object-fit: cover; display: block; }
+    @media(max-width: 900px){
+      .zigzag-grid { grid-template-columns: 1fr; gap: 40px; }
+      .zigzag-grid.reverse .zigzag-text, .zigzag-grid.reverse .zigzag-visual { order: initial; }
+      .zigzag-visual img { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo-link" id="logo-link">
+      <img src="Logo-normal.png" alt="Nexify Studio" class="logo-normal"/>
+      <img src="Logo-compact.png" alt="NX/FY" class="logo-compact"/>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="servicios.html" class="nav-link active">Servicios</a>
+      <a href="casos.html" class="nav-link">Casos de éxito</a>
+      <a href="creadores.html" class="nav-link">Creadores</a>
+    </div>
+    <div class="nav-actions">
+      <a href="contacto.html" class="btn-nav-primary">Hablemos →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HEADER COMPACTO ══ -->
+<section class="hero" style="min-height: auto; padding-top: 120px; padding-bottom: 40px; align-items: center; justify-content: center; text-align: center;">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="section-container" style="position: relative; z-index: 1;">
+    <div class="retro-tag" style="color: var(--dk); font-size: 0.9rem; margin-bottom: 16px;">— Servicios</div>
+    <h1 class="hero-title" style="margin-bottom: 16px; font-size: 3.5rem;">
+      <span class="hero-line-1">DE LA IDEA AL STREAM.</span>
+      <span class="hero-line-2">NUESTRO ECOSISTEMA.</span>
+    </h1>
+    <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">
+      Soluciones completas (end-to-end) para integrar tu marca en el mundo del gaming y la creación de contenido, sin dolores de cabeza técnicos.
+    </p>
+  </div>
+</section>
+
+<!-- ══ SERVICIOS ZIGZAG ══ -->
+<section class="zigzag-section reveal">
+  <div class="section-container">
+    <div class="zigzag-grid">
+      <div class="zigzag-text">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M12 12h.01"/><path d="M8 10v4"/><path d="M6 12h4"/><path d="M16 10h.01"/><path d="M18 12h.01"/></svg></div>
+        <h2 class="zigzag-title">Desarrollo de Juegos<br/>y Experiencias</h2>
+        <p class="zigzag-desc">No hacemos plantillas aburridas. Creamos minijuegos en HTML5, integraciones en web, filtros de realidad aumentada y dinámicas multijugador altamente adictivas.</p>
+        <p class="zigzag-desc">Nuestro enfoque está en la retención: diseñamos bucles de juego (game loops) que hacen que el usuario quiera jugar "una partida más", maximizando su tiempo de exposición a tu marca.</p>
+      </div>
+      <div class="zigzag-visual">
+        <img src="https://picsum.photos/seed/nxserv1/800/600" alt="Desarrollo de juegos"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zigzag-section reveal">
+  <div class="section-container">
+    <div class="zigzag-grid reverse">
+      <div class="zigzag-text">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h2 class="zigzag-title">Integración de Marca<br/>(Brand Placement)</h2>
+        <p class="zigzag-desc">Poner tu logo en una esquina es invisible. Nosotros convertimos tu producto en el protagonista. Puede ser el vehículo del personaje, el "power-up" que te da invencibilidad, o el objetivo final del juego.</p>
+        <p class="zigzag-desc">Hacemos que la marca sea parte funcional y deseada de la experiencia, eliminando por completo la fricción publicitaria tradicional.</p>
+      </div>
+      <div class="zigzag-visual">
+        <img src="https://picsum.photos/seed/nxserv2/800/600" alt="Integración de marca"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zigzag-section reveal">
+  <div class="section-container">
+    <div class="zigzag-grid">
+      <div class="zigzag-text">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h2 class="zigzag-title">Gestión de Creadores<br/>e Influencers</h2>
+        <p class="zigzag-desc">Hablamos el idioma de los streamers. Nos encargamos de la búsqueda, negociación, briefing y seguimiento técnico con los creadores de contenido (Twitch, YouTube, TikTok).</p>
+        <p class="zigzag-desc">Aseguramos que el talento elegido no solo tenga los números, sino que encaje orgánicamente con tu marca y sepa cómo dinamizar la experiencia en directo con su chat.</p>
+      </div>
+      <div class="zigzag-visual">
+        <img src="https://picsum.photos/seed/nxserv3/800/600" alt="Gestión de creadores"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zigzag-section reveal">
+  <div class="section-container">
+    <div class="zigzag-grid reverse">
+      <div class="zigzag-text">
+        <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h2 class="zigzag-title">Lanzamiento, Monitorización<br/>y Analytics</h2>
+        <p class="zigzag-desc">Desplegamos la campaña y te damos control total. A través de nuestro dashboard en tiempo real, podrás ver cuánta gente está jugando, su tiempo medio de sesión y métricas de conversión.</p>
+        <p class="zigzag-desc">Al finalizar, entregamos un reporte B2B completo con insights accionables para que puedas justificar el ROI frente a tu equipo directivo o clientes.</p>
+      </div>
+      <div class="zigzag-visual">
+        <img src="https://picsum.photos/seed/nxserv4/800/600" alt="Analytics"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-stamp">READY PLAYER ONE</div>
+    <h2 class="cta-title">Desbloquea<br/>tu audiencia</h2>
+    <p class="cta-desc">Cuéntanos tu objetivo de marketing y te devolvemos una propuesta de juego en 48h.</p>
+    <a href="contacto.html" class="btn-dark">Solicita una campaña →</a>
+  </div>
+  <div class="cta-deco" aria-hidden="true"><img src="Logo-compact.png" alt="" class="cta-logo-deco"/></div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="Logo-normal.png" alt="Nexify Studio" class="footer-logo-img"/>
+      <p class="footer-tagline">Juegos y experiencias interactivas para marcas que quieren ser recordadas.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Plataforma</h4>
+        <ul>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="casos.html">Casos de éxito</a></li>
+          <li><a href="creadores.html">Creadores</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:hola@nexify.es">hola@nexify.es</a></li>
+          <li><a href="contacto.html">Solicitar campaña</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Nexify Studio. Todos los derechos reservados.</p>
+    <img src="Logo-compact.png" alt="NX/FY" class="footer-bottom-logo"/>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

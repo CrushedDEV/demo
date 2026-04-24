@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ideas de Campaña — Nexify Studio</title>
+  <meta name="description" content="Ideas de gamificación para marcas, streamers y eventos. Descubre qué experiencia interactiva encaja mejor con tu proyecto."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* ── IDEAS PAGE ── */
+    .ideas-page-hero{background:var(--dk);padding:120px 24px 80px;border-bottom:3px solid var(--y)}
+    .ideas-page-hero .section-container{max-width:1100px;margin:0 auto;padding:0 24px}
+    .ideas-page-hero .retro-tag{color:rgba(255,255,255,.35)}
+    .ideas-page-hero .section-title{color:var(--wh)}
+    .ideas-page-hero .section-body{color:rgba(255,255,255,.55)}
+    .ideas-filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:36px}
+    .filter-btn{font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.06em;padding:8px 20px;border-radius:100px;border:2px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.55);cursor:pointer;transition:all .2s}
+    .filter-btn:hover,.filter-btn.active{background:var(--y);border-color:var(--y);color:var(--dk)}
+
+    /* ── IDEAS GRID ── */
+    .ideas-main{background:var(--g1);padding:80px 24px}
+    .ideas-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .idea-card{background:var(--wh);border:3px solid var(--dk);border-radius:var(--r);overflow:hidden;box-shadow:5px 5px 0 var(--dk);transition:all .25s}
+    .idea-card:hover{transform:translate(-4px,-4px);box-shadow:9px 9px 0 var(--dk)}
+    .idea-card-top{padding:28px 24px 0}
+    .idea-type-badge{display:inline-block;font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;border:2px solid var(--dk);margin-bottom:18px}
+    .badge-marca{background:#e8f4fd;color:#0066cc}
+    .badge-streamer{background:#f3e5ff;color:#7722cc}
+    .badge-evento{background:#fff3cd;color:#996600}
+    .idea-card-icon{font-size:2.2rem;margin-bottom:14px;display:block}
+    .idea-card h3{font-family:var(--display);font-size:1.5rem;letter-spacing:.03em;color:var(--dk);margin-bottom:10px}
+    .idea-card-desc{font-size:.875rem;color:var(--g4);line-height:1.7;margin-bottom:20px}
+    .idea-card-meta{border-top:2px solid var(--g2);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .idea-meta-item{display:flex;flex-direction:column;gap:2px}
+    .idea-meta-label{font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g3)}
+    .idea-meta-val{font-size:.8rem;font-weight:600;color:var(--dk)}
+    .idea-kpi{display:flex;align-items:center;gap:6px}
+    .idea-kpi-num{font-family:var(--display);font-size:1.2rem;color:var(--y);-webkit-text-stroke:1px var(--dk)}
+
+    /* ── CTA STRIP ── */
+    .ideas-cta-strip{background:var(--y);padding:64px 24px;border-top:3px solid var(--dk);text-align:center}
+    .ideas-cta-strip h2{font-family:var(--display);font-size:clamp(1.8rem,5vw,3.5rem);color:var(--dk);letter-spacing:.02em;margin-bottom:12px}
+    .ideas-cta-strip p{font-size:1rem;color:rgba(0,0,0,.65);max-width:460px;margin:0 auto 28px;line-height:1.7}
+    .ideas-cta-strip .btn-primary{margin:0 auto}
+
+    @media(max-width:1024px){.ideas-cards-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.ideas-cards-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo-link">
+      <img src="Logo-normal.png" alt="Nexify Studio" class="logo-normal"/>
+      <img src="Logo-compact.png" alt="NX/FY" class="logo-compact"/>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html#inicio"      class="nav-link">Inicio</a>
+      <a href="index.html#que-hacemos" class="nav-link">Qué hacemos</a>
+      <a href="index.html#demo"        class="nav-link">Demo</a>
+      <a href="index.html#casos"       class="nav-link">Casos reales</a>
+      <a href="index.html#precios"     class="nav-link">Precios</a>
+      <a href="ideas.html"             class="nav-link active nav-link-accent">Ideas →</a>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html#faq"      class="btn-nav-outline">FAQ</a>
+      <a href="index.html#contacto" class="btn-nav-primary">Hablemos →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="ideas-page-hero">
+  <div class="section-container">
+    <div class="retro-tag">— Ideas de campaña</div>
+    <h2 class="section-title">¿No sabes por dónde empezar?<br/>Empieza aquí.</h2>
+    <p class="section-body" style="max-width:580px">
+      Estas son algunas de las ideas que hemos producido o que tenemos en el radar. Úsalas como inspiración — o como punto de partida para algo totalmente tuyo.
+    </p>
+    <div class="ideas-filter-row">
+      <button class="filter-btn active" data-filter="all">Todas las ideas</button>
+      <button class="filter-btn" data-filter="marca">Para marcas</button>
+      <button class="filter-btn" data-filter="streamer">Para streamers</button>
+      <button class="filter-btn" data-filter="evento">Para eventos</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ IDEAS GRID ══ -->
+<section class="ideas-main">
+  <div class="section-container">
+    <div class="ideas-cards-grid" id="ideas-grid">
+
+      <!-- MARCA 1 -->
+      <div class="idea-card" data-type="marca">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-marca">Para marcas</span>
+          <span class="idea-card-icon">🎯</span>
+          <h3>Minijuego de lanzamiento</h3>
+          <p class="idea-card-desc">
+            El usuario juega un minijuego de 30 segundos para desbloquear el precio de lanzamiento o una prueba gratuita de tu producto. La puntuación mínima actúa como "premio". Incentiva la participación y genera sensación de mérito.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Web + Stories</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">3 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">+340%</span>
+            <span class="idea-meta-label">Engagement estimado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STREAMER 1 -->
+      <div class="idea-card" data-type="streamer">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-streamer">Para streamers</span>
+          <span class="idea-card-icon">🎮</span>
+          <h3>Trivia controlada por el chat</h3>
+          <p class="idea-card-desc">
+            El chat vota en vivo con "1", "2" o "3" para responder preguntas sobre la marca patrocinadora. Las respuestas correctas desbloquean descuentos o recompensas en tiempo real. El streamer solo modera — Nexify lo gestiona todo.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Twitch / YouTube</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">2 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">65%</span>
+            <span class="idea-meta-label">Participación activa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 1 -->
+      <div class="idea-card" data-type="evento">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-evento">Para eventos</span>
+          <span class="idea-card-icon">📱</span>
+          <h3>Pantalla gigante multijugador</h3>
+          <p class="idea-card-desc">
+            Los asistentes escanean un QR y su móvil se convierte en el control de un juego proyectado en pantalla grande. Para jugar, dejan su email. Funciona en ferias, festivales, presentaciones de producto y congresos.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Pantalla + móvil</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">4 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">22 min</span>
+            <span class="idea-meta-label">Tiempo medio de interacción</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARCA 2 -->
+      <div class="idea-card" data-type="marca">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-marca">Para marcas</span>
+          <span class="idea-card-icon">🔮</span>
+          <h3>Filtro AR con mecánica de juego</h3>
+          <p class="idea-card-desc">
+            Un filtro de Instagram o TikTok que no solo aplica un efecto — te hace jugar. El usuario esquiva elementos, recoge objetos o supera un reto visual de 15 segundos. El resultado se comparte automáticamente. UGC masivo sin pedirlo.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Instagram / TikTok</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">3–4 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">+520%</span>
+            <span class="idea-meta-label">Contenido compartido</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STREAMER 2 -->
+      <div class="idea-card" data-type="streamer">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-streamer">Para streamers</span>
+          <span class="idea-card-icon">⚡</span>
+          <h3>Ruleta de recompensas en directo</h3>
+          <p class="idea-card-desc">
+            Los espectadores acumulan puntos mientras ven el stream. Con los puntos pueden hacer girar una ruleta que reparte premios del patrocinador: descuentos, productos, subs, shoutouts. La marca paga los premios, no la producción.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Twitch / Discord</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">2 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">3×</span>
+            <span class="idea-meta-label">Retención vs. mención directa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 2 -->
+      <div class="idea-card" data-type="evento">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-evento">Para eventos</span>
+          <span class="idea-card-icon">🏆</span>
+          <h3>Ranking en tiempo real con premios</h3>
+          <p class="idea-card-icon" style="font-size:inherit;margin:0 0 14px">
+          </p>
+          <p class="idea-card-desc">
+            Durante el evento, los asistentes compiten en un ranking global visible en pantallas. El top 3 gana premios del patrocinador. La competición crea conversación orgánica, fotos y menciones durante todo el evento. No necesitas influencers.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Pantalla + web</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">3–4 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">+280%</span>
+            <span class="idea-meta-label">Menciones en RRSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARCA 3 -->
+      <div class="idea-card" data-type="marca">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-marca">Para marcas</span>
+          <span class="idea-card-icon">🧩</span>
+          <h3>Quiz de producto con recompensa</h3>
+          <p class="idea-card-desc">
+            Un quiz de 5 preguntas sobre el producto o la historia de la marca. Al terminar, el usuario recibe un "perfil" personalizado con el producto o variante que más le encaja — y un cupón. Conversión directa a compra, cero fricciones.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Web / Newsletter</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">2 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">+190%</span>
+            <span class="idea-meta-label">Conversión vs. banner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STREAMER 3 -->
+      <div class="idea-card" data-type="streamer">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-streamer">Para streamers</span>
+          <span class="idea-card-icon">🎲</span>
+          <h3>Minijuego integrado en stream overlay</h3>
+          <p class="idea-card-desc">
+            Un juego que corre sobre el overlay del stream. Los espectadores ven cómo evoluciona en pantalla sin salir de Twitch. El streamer puede activarlo entre partidas. La marca aparece de forma natural dentro del contenido, no como interrupción.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">Twitch overlay</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">3 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">40%</span>
+            <span class="idea-meta-label">Participación activa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 3 -->
+      <div class="idea-card" data-type="evento">
+        <div class="idea-card-top">
+          <span class="idea-type-badge badge-evento">Para eventos</span>
+          <span class="idea-card-icon">🤝</span>
+          <h3>Juego colaborativo de networking</h3>
+          <p class="idea-card-desc">
+            Los asistentes forman equipos espontáneos para completar retos. Cada reto implica hablar con alguien nuevo. La mecánica rompe el hielo sin forzarlo, y la marca aparece como facilitadora de conexiones, no solo como patrocinador.
+          </p>
+        </div>
+        <div class="idea-card-meta">
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plataforma</span>
+            <span class="idea-meta-val">App + pantallas</span>
+          </div>
+          <div class="idea-meta-item">
+            <span class="idea-meta-label">Plazo</span>
+            <span class="idea-meta-val">4–5 semanas</span>
+          </div>
+          <div class="idea-kpi">
+            <span class="idea-kpi-num">5K+</span>
+            <span class="idea-meta-label">Interacciones por evento</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA STRIP ══ -->
+<section class="ideas-cta-strip">
+  <h2>¿Ves algo que encaja?<br/>Cuéntanoslo.</h2>
+  <p>Todas estas ideas son adaptables. Dinos tu campaña, tu audiencia y tu objetivo — y diseñamos la mecánica exacta para ti.</p>
+  <a href="index.html#contacto" class="btn-primary">Quiero mi idea personalizada →</a>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="Logo-normal.png" alt="Nexify Studio" class="footer-logo-img"/>
+      <p class="footer-tagline">Juegos y experiencias interactivas para marcas que quieren ser recordadas.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#">Minijuegos de marca</a></li>
+          <li><a href="#">Streaming interactivo</a></li>
+          <li><a href="#">Filtros AR</a></li>
+          <li><a href="#">Activaciones en vivo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Estudio</h4>
+        <ul>
+          <li><a href="index.html#casos">Casos de éxito</a></li>
+          <li><a href="index.html#precios">Precios</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:hola@nexify.es">hola@nexify.es</a></li>
+          <li><a href="tel:+34600000000">+34 600 000 000</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Nexify Studio. Todos los derechos reservados.</p>
+    <img src="Logo-compact.png" alt="NX/FY" class="footer-bottom-logo"/>
+  </div>
+</footer>
+
+<script>
+  // Navbar
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    const [s0, s1, s2] = hamburger.querySelectorAll('span');
+    if (open) { s0.style.transform='translateY(7px) rotate(45deg)'; s1.style.opacity='0'; s2.style.transform='translateY(-7px) rotate(-45deg)'; }
+    else { s0.style.transform=s1.style.opacity=s2.style.transform=''; }
+  });
+
+  // Filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const ideaCards  = document.querySelectorAll('.idea-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      ideaCards.forEach(card => {
+        const show = f === 'all' || card.dataset.type === f;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  // Scroll reveal
+  ideaCards.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${(i % 3) * 80}ms`;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) entries[0].target.classList.add('visible');
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }).observe(el);
+  });
+
+  // Dynamic styles
+  const s = document.createElement('style');
+  s.textContent = '#navbar.scrolled{box-shadow:0 4px 0 rgba(245,197,24,.3)}.nav-link-accent{color:var(--y,#f5c518)!important}';
+  document.head.appendChild(s);
+</script>
+</body>
+</html>

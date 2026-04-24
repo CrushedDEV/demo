@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activación de Cuenta — Nexify Portal</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body class="login-body">
+
+<div class="login-split">
+  <!-- Formulario de Activación Limpio y Profesional -->
+  <div class="login-form-side">
+    <div class="login-box" style="max-width: 420px;">
+      <a href="index.html"><img src="Logo-normal.png" alt="Nexify" class="login-logo"/></a>
+      
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+        <span style="background: rgba(16, 185, 129, 0.1); color: #059669; font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">Invitación Activa</span>
+      </div>
+      
+      <h1 class="login-title">Configura tu perfil</h1>
+      <p class="login-subtitle">Nexify Studio te ha invitado a gestionar el portal de tu campaña. Completa tus datos para acceder.</p>
+      
+      <form action="client-dashboard.html">
+        <div class="form-group">
+          <label class="form-label">Email Corporativo</label>
+          <input type="email" class="form-input" value="director@marca-cliente.com" disabled style="background: #f9fafb; color: var(--g4);"/>
+          <p style="font-size: 0.75rem; color: var(--g4); margin-top: 6px;">Vinculado a esta invitación.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-input" placeholder="Ej. Carlos" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Apellidos</label>
+            <input type="text" class="form-input" placeholder="Ej. Fernández" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Cargo / Departamento</label>
+          <input type="text" class="form-input" placeholder="Ej. Director de Marketing" required/>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Crea una Contraseña</label>
+          <input type="password" class="form-input" placeholder="Mínimo 8 caracteres" required/>
+        </div>
+        
+        <button type="submit" class="btn-login" style="margin-top: 24px;">Activar Cuenta y Acceder</button>
+      </form>
+
+      <p style="font-size: 0.8rem; color: var(--g4); margin-top: 24px; text-align: center;">
+        Al activar tu cuenta, aceptas nuestros <a href="#" style="color: var(--dk); text-decoration: underline;">Términos de Privacidad B2B</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Branding Visual Premium -->
+  <div class="login-visual-side">
+    <div class="premium-grid"></div>
+    <div class="premium-brand-box">
+      <div class="premium-brand-title">NEXIFY<br/>STUDIO</div>
+      <div class="premium-brand-subtitle">Private Onboarding</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

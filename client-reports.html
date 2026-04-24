@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reportes — Nexify Portal</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+<div class="app-container">
+  
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="Logo-normal.png" alt="Nexify" class="sidebar-logo"/>
+    </div>
+    
+    <div class="sidebar-nav">
+      <div class="nav-section-title">Análisis</div>
+      <a href="client-dashboard.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+        Overview Campaña
+      </a>
+      <a href="client-reports.html" class="nav-item active">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+        Reportes Detallados
+      </a>
+      
+      <div class="nav-section-title">Gestión</div>
+      <a href="client-settings.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        Configuración del Juego
+      </a>
+      <a href="client-creators.html" class="nav-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Creadores Activos
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <span class="user-name">Ana García</span>
+        <span class="user-role">Monster Energy</span>
+      </div>
+      <a href="login.html" style="margin-left:auto;" title="Cerrar sesión">
+        <svg class="icon" viewBox="0 0 24 24" style="color:var(--g4);"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+      </a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="search-bar">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" placeholder="Buscar métricas o reportes..."/>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-action">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          <div class="notification-dot"></div>
+        </div>
+        <div class="topbar-action">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        </div>
+      </div>
+    </header>
+    
+    <div class="content-area">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Reportes Detallados</h1>
+          <p class="page-subtitle">Desglose de métricas por día de la campaña Reto Xtreme.</p>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <button class="btn-secondary">
+            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            PDF
+          </button>
+          <button class="btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Exportar CSV
+          </button>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <div class="box-header">
+          <h2 class="box-title">Histórico de Conversión Diario</h2>
+        </div>
+        <div class="box-content" style="padding: 0;">
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Usuarios Únicos</th>
+                  <th>Partidas Jugadas</th>
+                  <th>Tiempo Medio</th>
+                  <th>Descuentos Desbloq.</th>
+                  <th>CTR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>12 May 2026</strong></td>
+                  <td>14,203</td>
+                  <td>28,401</td>
+                  <td>04:30</td>
+                  <td>3,102</td>
+                  <td><span style="color: #059669; font-weight: 600;">21.8%</span></td>
+                </tr>
+                <tr>
+                  <td><strong>11 May 2026</strong></td>
+                  <td>12,850</td>
+                  <td>22,100</td>
+                  <td>04:15</td>
+                  <td>2,501</td>
+                  <td><span style="color: #059669; font-weight: 600;">19.4%</span></td>
+                </tr>
+                <tr>
+                  <td><strong>10 May 2026</strong></td>
+                  <td>9,420</td>
+                  <td>15,320</td>
+                  <td>03:50</td>
+                  <td>1,120</td>
+                  <td><span style="color: var(--dk); font-weight: 600;">11.8%</span></td>
+                </tr>
+                <tr>
+                  <td><strong>09 May 2026</strong></td>
+                  <td>8,100</td>
+                  <td>12,400</td>
+                  <td>03:45</td>
+                  <td>850</td>
+                  <td><span style="color: var(--dk); font-weight: 600;">10.4%</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

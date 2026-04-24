@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto — Nexify Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Estilos extra para el formulario de contacto B2B */
+    .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1000px; margin: 0 auto; align-items: center; }
+    @media(max-width: 768px){ .contact-wrapper { grid-template-columns: 1fr; gap: 40px; } }
+  </style>
+</head>
+<body style="background: var(--dk); color: var(--wh);">
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo-link" id="logo-link">
+      <img src="Logo-normal.png" alt="Nexify Studio" class="logo-normal"/>
+      <img src="Logo-compact.png" alt="NX/FY" class="logo-compact"/>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="servicios.html" class="nav-link">Servicios</a>
+      <a href="casos.html" class="nav-link">Casos de éxito</a>
+      <a href="creadores.html" class="nav-link">Creadores</a>
+    </div>
+    <div class="nav-actions">
+      <a href="contacto.html" class="btn-nav-primary">Hablemos →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ CONTACTO ══ -->
+<section style="padding: 120px 24px 60px; min-height: auto; display: flex; align-items: flex-start;">
+  <div class="section-container">
+    <div class="contact-wrapper">
+      <div class="lead-content reveal">
+        <div class="lead-badge" style="background: var(--y); color: var(--dk);">START GAME</div>
+        <h1 class="lead-title" style="font-size: clamp(3rem, 6vw, 4.5rem);">Sube al<br/>siguiente nivel</h1>
+        <p class="lead-desc" style="font-size: 1.1rem; line-height: 1.8;">
+          Cuéntanos sobre tu marca o campaña en este breve formulario. En 48 horas te devolveremos un concepto de juego diseñado específicamente para tu audiencia. Sin compromisos.
+        </p>
+        <ul class="lead-bullets" style="margin-top: 32px;">
+          <li><span style="color: var(--y);">✦</span> Respuesta rápida de nuestro equipo.</li>
+          <li><span style="color: var(--y);">✦</span> Concepto de juego personalizado B2B.</li>
+          <li><span style="color: var(--y);">✦</span> Opciones de creadores de contenido adaptadas.</li>
+        </ul>
+      </div>
+      
+      <div class="lead-form-wrap reveal" style="background: var(--dk2); border-color: rgba(245,197,24,0.2);">
+        <form class="lead-form" id="contact-form" novalidate>
+          <div class="lead-form-group">
+            <label for="contact-name">Nombre completo</label>
+            <input type="text" id="contact-name" name="name" placeholder="Ej: Ana García" required/>
+          </div>
+          <div class="lead-form-group">
+            <label for="contact-company">Empresa / Marca</label>
+            <input type="text" id="contact-company" name="company" placeholder="Ej: Red Bull" required/>
+          </div>
+          <div class="lead-form-group">
+            <label for="contact-email">Email corporativo</label>
+            <input type="email" id="contact-email" name="email" placeholder="ana@empresa.com" required/>
+          </div>
+          <div class="lead-form-group">
+            <label for="contact-goal">¿Qué quieres lograr?</label>
+            <input type="text" id="contact-goal" name="goal" placeholder="Ej: Lanzamiento de producto, aumentar leads..." required/>
+          </div>
+          <button type="submit" class="btn-dark lead-submit" style="margin-top: 10px; background: var(--y); color: var(--dk); border-color: var(--y);">
+            Solicitar propuesta gratuita →
+          </button>
+        </form>
+        <div class="lead-success" id="contact-success" style="display:none">
+          <div class="lead-success-icon">🎮</div>
+          <h3>¡Partida Iniciada!</h3>
+          <p>Hemos recibido tus datos. Nuestro equipo está preparando tu concepto y te contactará en menos de 48h.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="Logo-normal.png" alt="Nexify Studio" class="footer-logo-img"/>
+      <p class="footer-tagline">Juegos y experiencias interactivas para marcas que quieren ser recordadas.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Plataforma</h4>
+        <ul>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="casos.html">Casos de éxito</a></li>
+          <li><a href="creadores.html">Creadores</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:hola@nexify.es">hola@nexify.es</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Nexify Studio. Todos los derechos reservados.</p>
+    <img src="Logo-compact.png" alt="NX/FY" class="footer-bottom-logo"/>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  // Script rápido para el formulario de contacto
+  const contactForm = document.getElementById('contact-form');
+  const contactSuccess = document.getElementById('contact-success');
+  if (contactForm) {
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      contactForm.style.display = 'none';
+      if (contactSuccess) contactSuccess.style.display = 'flex';
+    });
+  }
+</script>
+</body>
+</html>
